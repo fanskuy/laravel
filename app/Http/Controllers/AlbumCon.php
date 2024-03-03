@@ -15,18 +15,18 @@ class AlbumCon extends Controller
 
     public function index()
     {
-        return view('dashboard');
+        return view('home');
     }
 
     public function album()
     {
         $albums = AlbumModel::all();
-        return view('album', compact('albums'));
+        return view('home', compact('albums'));
     }
 
     public function create()
     {
-        return view('album');
+        return view('home');
     }
 
     public function store(Request $request)
@@ -55,7 +55,7 @@ class AlbumCon extends Controller
     public function edit(string $id)
     {
         $albums = AlbumModel::find($id);
-        return view('album', compact('albums'));
+        return view('home', compact('albums'));
     }
 
     public function update(Request $request, $id)

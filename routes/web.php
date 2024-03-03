@@ -30,7 +30,7 @@ Route::get('/', [App\Http\Controllers\AlbumCon::class, 'landing']);
 Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 
-Route::get('/dashboard', [App\Http\Controllers\AlbumCon::class, 'index'])->name('dashboard');
+Route::get('/home', [App\Http\Controllers\AlbumCon::class, 'index'])->name('home');
 Route::get('/album', [App\Http\Controllers\AlbumCon::class, 'album'])->name('album');
 Route::post('/album-store', [App\Http\Controllers\AlbumCon::class, 'store'])->name('album.store');
 Route::put('/album-update/{id}', [App\Http\Controllers\AlbumCon::class, 'update'])->name('album.update');
